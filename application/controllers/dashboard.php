@@ -31,6 +31,26 @@
             $this->load->view('keranjang');
             $this->load->view('templats/footer');
         }
+            public function hapus_keranjang()
+        {
+            $this->cart->destroy();
+            redirect('dashboard/index');
+        }
+        public function pembayaran()
+        {
+                $this->load->view('templats/header');
+                $this->load->view('templats/sidebar');
+                $this->load->view('pembayaran');
+                $this->load->view('templats/footer');
+    
+        }
+        public function proses_pesanan()
+        {
+                $this->load->view('templats/header');
+                $this->load->view('templats/sidebar');
+                $this->load->view('proses_pesanan');
+                $this->load->view('templats/footer');
+        }
     }
     
 ?>
